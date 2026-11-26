@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow | Interactive To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="app-container">
+    <header class="app-header">
+      <h1>TaskFlow</h1>
+      <p>Organize your day. Saved automatically in your browser.</p>
+    </header>
+
+    <!-- Task Input Section -->
+    <section class="input-group">
+      <input 
+        type="text" 
+        id="task-input" 
+        placeholder="What needs to be done?" 
+        autocomplete="off"
+      >
+      <select id="priority-select" aria-label="Task Priority">
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+        <option value="low">Low</option>
+      </select>
+      <button id="add-btn" type="button">Add Task</button>
+    </section>
+
+    <!-- Filter Controls -->
+    <nav class="filter-bar" aria-label="Task Filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+    </nav>
+
+    <!-- Task List -->
+    <ul id="task-list" class="task-list"></ul>
+
+    <!-- Footer Stats & Clear Action -->
+    <footer class="app-footer">
+      <span id="task-counter">0 tasks remaining</span>
+      <button id="clear-completed-btn" type="button">Clear Completed</button>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
